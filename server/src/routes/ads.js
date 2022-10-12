@@ -10,7 +10,7 @@ router.get('/ads/:key', async(req,res)=>{
                 "$lookup":{
                     from: "company",
                     localField: "companyId",
-                    foreignField: "id",
+                    foreignField: "_id",
                     as: "company"
                 },
             },
